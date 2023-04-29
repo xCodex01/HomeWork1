@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork.ConsoleApp.DomainModel
+﻿namespace HomeWork.ConsoleApp.DomainModel
 {
     public class DifferentVariableException : Exception
     {
@@ -22,7 +16,7 @@ namespace HomeWork.ConsoleApp.DomainModel
         {
             get
             {
-                return $"Impossibile combinare monomi con incognitè diverse. Monomi: {M1} + {M2}";
+                return $"{M1.ToString()} + {M2.ToString()}";
             }
         }
 

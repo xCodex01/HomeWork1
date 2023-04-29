@@ -19,7 +19,7 @@
 
             get
             {
-                return $"Impossibile combinare monomi con esponenti diversi. Monomi: {M1} + {M2}";
+                return $"{M1} + {M2}";
             }
 
         }

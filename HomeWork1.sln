@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork1.ConsoleApp.App", "HomeWork1\HomeWork1.ConsoleApp.App.csproj", "{B8F31342-A763-4BB5-B1DD-3B526B824BBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork1.ConsoleApp.App", "HomeWork1\HomeWork1.ConsoleApp.App.csproj", "{B8F31342-A763-4BB5-B1DD-3B526B824BBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork.ConsoleApp.DomainModel", "HomeWork.ConsoleApp.DomainModel\HomeWork.ConsoleApp.DomainModel.csproj", "{D4DAD1A1-F993-4777-A6E0-88273193297A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork1.ConsoleApp.DomainModel", "HomeWork.ConsoleApp.DomainModel\HomeWork1.ConsoleApp.DomainModel.csproj", "{D4DAD1A1-F993-4777-A6E0-88273193297A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
