@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace HomeWork.ConsoleApp.DomainModel
 {
+
+    /////////////////////////////////////////////////////////////////////////////////
+    /// ATTUALMENTE USELESS
+    /// 
+    /// 
     public static class HelpfulMethods
     {
         /// <summary>

@@ -77,12 +77,14 @@ namespace HomeWork.ConsoleApp.DomainModel
         /// <param name="m1"></param>
         /// <param name="m2"></param>
         /// <returns></returns>
-        public static Monomial operator *(Monomial m1, Monomial m2) => new((m1.Coefficient * m2.Coefficient), (m1.Variable+m2.Variable), (m1.Exponent*m2.Exponent));
+        public static Monomial operator *(Monomial m1, Monomial m2) => new((m1.Coefficient * m2.Coefficient), m1.Variable, (m1.Exponent+m2.Exponent));
 
-        
+        public void ValueOf(int value)
+        {
 
+            Console.WriteLine($"{Math.Pow((double)Coefficient*value, Exponent)}");
 
-        
+        }
 
     }
 

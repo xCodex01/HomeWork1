@@ -21,18 +21,7 @@ namespace HomeWork.ConsoleApp.DomainModel
 
             Coefficient = coef;
             Exponent = exp;
-            if (HelpfulMethods.AllLettersEqual(Variable) == true)
-            {
-
-                Variable = var.Substring(0,1);
-                if(Exponent==1)
-                {
-                    Exponent += 1;
-                }
-
-            }
-            else
-                Variable = var;
+            Variable = var;
              
 
         }
