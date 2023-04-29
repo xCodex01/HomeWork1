@@ -8,15 +8,38 @@ namespace HomeWork.ConsoleApp.DomainModel
 {
     public partial class Monomial
     {
-
-        public Monomial()
+        /// <summary>
+        /// COstruttore dell'oggetto Monomio che prende
+        /// in input il valore del coefficente, l'incognita,
+        /// e il valore dell'esponente
+        /// </summary>
+        /// <param name="coef"></param>
+        /// <param name="var"></param>
+        /// <param name="exp"></param>
+        public Monomial(int? coef, string var = "x", int exp = 0)
         {
+
+            Coefficient = coef;
+            Exponent = exp;
+            if (HelpfulMethods.AllLettersEqual(Variable) == true)
+            {
+
+                Variable = var.Substring(0,1);
+                if(Exponent==1)
+                {
+                    Exponent += 1;
+                }
+
+            }
+            else
+                Variable = var;
+             
 
         }
 
-        private int coefficient;
-        private string variable;
-        private int exponent;
+        private int? Coefficient;
+        private string Variable;
+        private int Exponent;
         
     }
 }
