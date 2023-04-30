@@ -29,7 +29,7 @@ namespace HomeWork.ConsoleApp.DomainModel
             else if (Coefficient == 1)
                 return $"{Variable}^{Exponent}";
 
-            else if (Coefficient == 0 || Coefficient == null)
+            else if (Coefficient == 0)
                 return $"";
 
             else if (Exponent == 1)
