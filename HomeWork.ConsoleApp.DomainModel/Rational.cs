@@ -9,7 +9,7 @@
         /// </summary>
         /// <param name="num"></param>
         /// <param name="den"></param>
-        public Rational(int? num, int? den) 
+        public Rational(int num, int den) 
         {
 
             Numerator = num;
@@ -34,9 +34,9 @@
         }
 
         //Definisce il numeratore dell'oggetto
-        private int? Numerator;
+        private int Numerator;
         //Definisce il denominatore dell'oggetto
-        private int? Denominator;
+        private int Denominator;
 
         
 

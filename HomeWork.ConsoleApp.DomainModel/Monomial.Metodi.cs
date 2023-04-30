@@ -18,7 +18,7 @@ namespace HomeWork.ConsoleApp.DomainModel
             if (Coefficient == 1)
                 return $"{Variable}^{Exponent}";
 
-            else if (Coefficient == null)
+            else if (Coefficient == 0 || Coefficient == null)
                 return $"";
 
             else if (Exponent == 1)
@@ -83,13 +83,19 @@ namespace HomeWork.ConsoleApp.DomainModel
 
 
         /// <summary>
-        /// Overload delloperando moltiplicazione
+        /// Overload dell'operando moltiplicazione
         /// </summary>
         /// <param name="m1"></param>
         /// <param name="m2"></param>
         /// <returns></returns>
         public static Monomial operator *(Monomial m1, Monomial m2) => new((m1.Coefficient * m2.Coefficient), m1.Variable, (m1.Exponent+m2.Exponent));
 
+        /// <summary>
+        /// Overload dell'operando divisione
+        /// </summary>
+        /// <param name="m1"></param>
+        /// <param name="m2"></param>
+        /// <returns></returns>
         public static Monomial operator /(Monomial m1, Monomial m2) => new(new Rational(m1.Coefficient, m2.Coefficient), m1.Variable, m1.Exponent - m2.Exponent);
 
         public void ValueOf(int value)

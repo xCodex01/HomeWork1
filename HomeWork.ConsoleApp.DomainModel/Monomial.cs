@@ -19,7 +19,10 @@ namespace HomeWork.ConsoleApp.DomainModel
         public Monomial(int? coef, string var = "x", int exp = 0)
         {
 
-            Coefficient = coef;
+            if (coef == null)
+                Coefficient = 0;
+            else
+                Coefficient = (int)coef;
             Exponent = exp;
             Variable = var;
              
@@ -37,7 +40,7 @@ namespace HomeWork.ConsoleApp.DomainModel
         }
 
         private Rational Rational;
-        private int? Coefficient;
+        private int Coefficient;
         private string Variable;
         private int Exponent;
         
