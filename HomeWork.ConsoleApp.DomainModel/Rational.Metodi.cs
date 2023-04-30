@@ -27,6 +27,8 @@
         /// <returns></returns>
         public override string ToString()
         {
+            if (Numerator == 1 && Denominator == 1)
+                return $"{1}";
 
             return $"{Numerator}/{Denominator}";
         }
@@ -136,6 +138,16 @@
         public void ValueOf()
         {
             Console.WriteLine("Il valore del razionale è: "+((float)Numerator/(float)Denominator));
+        }
+
+        public int GetNumerator()
+        {
+            return Numerator;
+        }
+
+        public int GetDenominator()
+        {
+            return Denominator;
         }
 
     }

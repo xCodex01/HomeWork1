@@ -15,7 +15,21 @@ namespace HomeWork.ConsoleApp.DomainModel
         /// <returns></returns>
         public override string ToString()
         {
-            if (Coefficient == 1)
+            if (Rational != null)
+            {
+
+                if (Rational.GetNumerator() == 1 && Rational.GetDenominator() == 1)
+                    return $"{Variable}^{Exponent}";
+
+                else if (Exponent == 1)
+                    return $"({Rational}){Variable}";
+
+                else if (Exponent == 0)
+                    return $"1";
+
+            }
+
+            else if (Coefficient == 1)
                 return $"{Variable}^{Exponent}";
 
             else if (Coefficient == 0 || Coefficient == null)
@@ -23,6 +37,11 @@ namespace HomeWork.ConsoleApp.DomainModel
 
             else if (Exponent == 1)
                 return $"{Coefficient}{Variable}";
+
+            else if (Exponent == 0)
+                return $"1";
+
+
 
             return $"{Coefficient}{Variable}^{Exponent}";
         }
