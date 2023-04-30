@@ -9,7 +9,7 @@ namespace HomeWork.ConsoleApp.DomainModel
     public partial class Monomial
     {
         /// <summary>
-        /// COstruttore dell'oggetto Monomio che prende
+        /// Costruttore dell'oggetto Monomio che prende
         /// in input il valore del coefficente, l'incognita,
         /// e il valore dell'esponente
         /// </summary>
@@ -29,6 +29,15 @@ namespace HomeWork.ConsoleApp.DomainModel
 
         }
 
+        /// <summary>
+        /// Costruttore dell'oggetto Monomio
+        /// che prende in input un razionale
+        /// da rappresentare come coefficiente,
+        /// l'incognita e l'esponente
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="var"></param>
+        /// <param name="exp"></param>
         public Monomial(Rational r, string var = "x", int exp = 0)
         {
 
@@ -39,9 +48,16 @@ namespace HomeWork.ConsoleApp.DomainModel
 
         }
 
+        //Tipo razionale per il coefficiente razionale
         private Rational Rational;
+
+        //Intero usato per rappresentare il coefficiente
         private int Coefficient;
+
+        //Stringa usata per rappresnetare l'incognita
         private string Variable;
+
+        //intero usato per rappresentare l'esponente
         private int Exponent;
         
     }
