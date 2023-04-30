@@ -90,6 +90,8 @@ namespace HomeWork.ConsoleApp.DomainModel
         /// <returns></returns>
         public static Monomial operator *(Monomial m1, Monomial m2) => new((m1.Coefficient * m2.Coefficient), m1.Variable, (m1.Exponent+m2.Exponent));
 
+        public static Monomial operator /(Monomial m1, Monomial m2) => new(new Rational(m1.Coefficient, m2.Coefficient), m1.Variable, m1.Exponent - m2.Exponent);
+
         public void ValueOf(int value)
         {
 

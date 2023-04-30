@@ -26,6 +26,17 @@ namespace HomeWork.ConsoleApp.DomainModel
 
         }
 
+        public Monomial(Rational r, string var = "x", int exp = 0)
+        {
+
+            Rational = r;
+            Variable = var;
+            Exponent=exp;
+
+
+        }
+
+        private Rational Rational;
         private int? Coefficient;
         private string Variable;
         private int Exponent;
