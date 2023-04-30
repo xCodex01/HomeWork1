@@ -24,9 +24,6 @@ namespace HomeWork.ConsoleApp.DomainModel
                 else if (Exponent == 1)
                     return $"({Rational}){Variable}";
 
-                else if (Exponent == 0)
-                    return $"1";
-
             }
 
             else if (Coefficient == 1)
@@ -117,6 +114,11 @@ namespace HomeWork.ConsoleApp.DomainModel
         /// <returns></returns>
         public static Monomial operator /(Monomial m1, Monomial m2) => new(new Rational(m1.Coefficient, m2.Coefficient), m1.Variable, m1.Exponent - m2.Exponent);
 
+        /// <summary>
+        /// Ritorna il valore di un monomio specificato
+        /// il valore della variabile
+        /// </summary>
+        /// <param name="value"></param>
         public void ValueOf(int value)
         {
 

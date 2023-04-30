@@ -27,10 +27,7 @@
         /// <returns></returns>
         public override string ToString()
         {
-            if (Numerator == 1 && Denominator == 1)
-                return $"{1}";
-
-            return $"{Numerator}/{Denominator}";
+            return Numerator == Denominator ? $"1" : $"{Numerator}/{Denominator}";
         }
 
         /// <summary>
@@ -70,9 +67,9 @@
         /// <returns></returns>
         private static int GCD(int a, int b)
         {
-            //Se b = 0 allora ritorna a sennò esegue una
+            //Se b = 0 allora ritorna 'a' sennò esegue una
             //chiamata ricorsiva con secondo parametro
-            //il risultato del modulo tra a e b
+            //il risultato del modulo tra 'a' e 'b'
             return b == 0 ? a : GCD(b, a % b);
         }
 
@@ -140,11 +137,19 @@
             Console.WriteLine("Il valore del razionale è: "+((float)Numerator/(float)Denominator));
         }
 
+        /// <summary>
+        /// Ritorna il numeratore
+        /// </summary>
+        /// <returns></returns>
         public int GetNumerator()
         {
             return Numerator;
         }
 
+        /// <summary>
+        /// Ritorna il denominatore
+        /// </summary>
+        /// <returns></returns>
         public int GetDenominator()
         {
             return Denominator;
