@@ -18,7 +18,7 @@ namespace HomeWork1.ConsoleApp.App
         {
 
             Console.WriteLine("HomeWork #1");
-            Console.WriteLine("Test Class for Rational and Polynomials");
+            Console.WriteLine("Test Class for Rationals and Polynomials");
             Console.WriteLine("================================================");
             Console.WriteLine("Rationals:");
             Console.WriteLine("");
@@ -41,6 +41,7 @@ namespace HomeWork1.ConsoleApp.App
             var m2 = new Monomial(5, "x", 1);
 
             Console.WriteLine($"{m1} + {m3} * {m2} = {m1} + {m3 * m2}");
+
         }
 
     }
