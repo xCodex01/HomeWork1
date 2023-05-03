@@ -113,10 +113,10 @@
         /// il valore della variabile
         /// </summary>
         /// <param name="value"></param>
-        public void ValueOf(int value)
+        public double ValueOf(double value)
         {
 
-            Console.WriteLine($"{Math.Pow((double)Coefficient*value, Exponent)}");
+            return Math.Pow((double)Coefficient * value, Exponent);
 
         }
 

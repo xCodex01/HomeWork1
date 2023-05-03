@@ -37,6 +37,11 @@ namespace HomeWork1.ConsoleApp.App
             Console.WriteLine($"{m1} + {m3} / {m2} = {m1} + {m3 / m2}");
             Console.WriteLine($"{m1} + {m3} * {m2} = {m1} + {m3 * m2}");
 
+            Console.WriteLine("Inserire il valore reale per il quale si vuole risolvere l'incognita di 2x^2 ");
+            Console.Write($"X = ");
+            double valueOfX = double.Parse( Console.ReadLine() );
+            Console.WriteLine($"Il valore di 2x^2 per x = {valueOfX} è : {m3.ValueOf(valueOfX)}");
+
         }
 
     }
