@@ -2,10 +2,20 @@
 {
     public class DifferentExponentException : Exception
     {
-
+        /////////////////////////////////////
+        ///ECCEZIONE NON ANCORA IMPLEMENTATA
+        /// PER COME SONO STRUTTURATE LE OPERAZIONE
+        /// NEL MAIN (PROGRAM.CS)
+        ///
         public Monomial M1 { get; }
         public Monomial M2 { get; }
 
+        /// <summary>
+        /// Eccezione per operazioni (somma o sottrazione)
+        /// non consetite
+        /// </summary>
+        /// <param name="m1"></param>
+        /// <param name="m2"></param>
         public DifferentExponentException(Monomial m1, Monomial m2)
         {
 

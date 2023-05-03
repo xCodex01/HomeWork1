@@ -9,7 +9,9 @@ namespace HomeWork.ConsoleApp.DomainModel
 
     /////////////////////////////////////////////////////////////////////////////////
     /// ATTUALMENTE USELESS
-    /// 
+    /// CLASSE STATICA PER UNA POSSIBILE IMPLEMENTAZIONE
+    /// DI FUNZIONI CHE PERMETTONO DI DIFFERENZIARE LE OPERAZIONI
+    /// SE SI VGOLIONO USARE PIU' INCOGNITE
     /// 
     public static class HelpfulMethods
     {
