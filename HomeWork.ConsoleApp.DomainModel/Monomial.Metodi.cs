@@ -48,13 +48,15 @@
         /// <exception cref="DifferentExponentException"></exception>
         public static Monomial operator +(Monomial m1, Monomial m2)
         {
-            
+
             if (m1.Exponent == m2.Exponent)
                 return new Monomial((m1.Coefficient + m2.Coefficient), m1.Variable, m2.Exponent);
 
             else if (m1.Variable != m2.Variable)
+            {
                 throw new DifferentVariableException(m1, m2);
                 return m1;
+            }
 
             throw new DifferentExponentException(m1, m2);
             return m1;
@@ -82,8 +84,10 @@
             }
 
             else if (m1.Variable != m2.Variable)
+            {
                 throw new DifferentVariableException(m1, m2);
                 return m1 - m2;
+            }
 
             return new Monomial((m1.Coefficient - m2.Coefficient), m1.Variable, m2.Exponent);
             
