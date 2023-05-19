@@ -1,4 +1,5 @@
 ﻿using HomeWork.ConsoleApp.DomainModel;
+using System.Text.Json;
 
 namespace HomeWork1.ConsoleApp.App
 {
@@ -43,7 +44,5 @@ namespace HomeWork1.ConsoleApp.App
             Console.WriteLine($"Il valore di {m3} per x = {valueOfX} è : {m3.ValueOf(valueOfX)}");
 
         }
-
     }
-
 }
