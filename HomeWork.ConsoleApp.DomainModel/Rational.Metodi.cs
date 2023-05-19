@@ -169,17 +169,24 @@
             return Denominator;
         }
 
+        /// <summary>
+        /// Override del metodo Equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
-            {
                 return false;
-            }
 
             Rational other = (Rational)obj;
             return Numerator == other.Numerator && Denominator == other.Denominator;
         }
 
+        /// <summary>
+        /// Prende l'hashcode della variabile
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             unchecked
@@ -191,21 +198,29 @@
             }
         }
 
+        /// <summary>
+        /// Ovveride dell'operatore ==
+        /// </summary>
+        /// <param name="r1"></param>
+        /// <param name="r2"></param>
+        /// <returns></returns>
         public static bool operator ==(Rational r1, Rational r2)
         {
             if (ReferenceEquals(r1, r2))
-            {
                 return true;
-            }
-
+            
             if (ReferenceEquals(r1, null) || ReferenceEquals(r2, null))
-            {
                 return false;
-            }
-
+            
             return r1.Equals(r2);
         }
 
+        /// <summary>
+        /// Ovveride dell'operatore !=
+        /// </summary>
+        /// <param name="r1"></param>
+        /// <param name="r2"></param>
+        /// <returns></returns>
         public static bool operator !=(Rational r1, Rational r2)
         {
             return !(r1 == r2);
