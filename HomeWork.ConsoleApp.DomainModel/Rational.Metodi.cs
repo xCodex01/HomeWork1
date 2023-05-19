@@ -72,6 +72,20 @@
             //il risultato del modulo tra 'a' e 'b'
             return b == 0 ? a : GCD(b, a % b);
         }
+        /*
+        Versione iterativa del GCD
+        private static int GCD(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+    
+            return a;
+        }
+        */
 
         /// <summary>
         /// Riduce ai minimi termini denominatore
