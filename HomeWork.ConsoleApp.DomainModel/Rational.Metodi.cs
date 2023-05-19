@@ -156,7 +156,7 @@
 
             string[] tokens = input.Split('/');
             if (tokens.Length != 2)
-                throw new ArgumentException("La stringa di input non è nel formato corretto: {numeratore}/{denominatore}");
+                throw new ArgumentException("La stringa di input non è nel formato corretto: numeratore/denominatore");
 
             if (!int.TryParse(tokens[0], out int numerator) || !int.TryParse(tokens[1], out int denominator))
                 throw new ArgumentException("La stringa di input contiene valori non validi per numeratore o denominatore.");
