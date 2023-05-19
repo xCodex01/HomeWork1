@@ -169,6 +169,48 @@
             return Denominator;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Rational other = (Rational)obj;
+            return Numerator == other.Numerator && Denominator == other.Denominator;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + Numerator.GetHashCode();
+                hash = hash * 23 + Denominator.GetHashCode();
+                return hash;
+            }
+        }
+
+        public static bool operator ==(Rational r1, Rational r2)
+        {
+            if (ReferenceEquals(r1, r2))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(r1, null) || ReferenceEquals(r2, null))
+            {
+                return false;
+            }
+
+            return r1.Equals(r2);
+        }
+
+        public static bool operator !=(Rational r1, Rational r2)
+        {
+            return !(r1 == r2);
+        }
+
     }
 
 }
