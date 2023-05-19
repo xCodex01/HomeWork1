@@ -144,6 +144,26 @@
         }
 
         /// <summary>
+        /// Parsa una stringa nel formato "numeratore/denominatore" e restituisce un oggetto Rational corrispondente.
+        /// </summary>
+        /// <param name="input">La stringa da parsare</param>
+        /// <returns>L'oggetto Rational parsato</returns>
+        public static Rational Parse(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                throw new ArgumentException("La stringa di input non può essere vuota o composta solo da spazi vuoti.");
+
+            string[] parts = input.Split('/');
+            if (parts.Length != 2)
+                throw new ArgumentException("La stringa di input non è nel formato corretto.");
+
+            if (!int.TryParse(parts[0], out int numerator) || !int.TryParse(parts[1], out int denominator))
+                throw new ArgumentException("La stringa di input contiene valori non validi per numeratore o denominatore.");
+
+            return new Rational(numerator, denominator);
+        }
+
+        /// <summary>
         /// Ritorna il valore in decimale del numero razionale
         /// </summary>
         public void ValueOf()
@@ -225,6 +245,8 @@
         {
             return !(r1 == r2);
         }
+
+
 
     }
 
