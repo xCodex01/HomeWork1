@@ -143,6 +143,19 @@
 
         }
 
+        private static int ContaCarattere(string str, char carattere)
+        {
+            int conteggio = 0;
+            foreach (char c in str)
+            {
+                if (c == carattere)
+                {
+                    conteggio++;
+                }
+            }
+            return conteggio;
+        }
+
         /// <summary>
         /// Parsa una stringa nel formato "numeratore/denominatore" e restituisce un oggetto Rational corrispondente.
         /// </summary>
@@ -153,11 +166,14 @@
             if (string.IsNullOrWhiteSpace(input))
                 throw new ArgumentException("La stringa di input non può essere vuota o composta solo da spazi vuoti.");
 
-            string[] parts = input.Split('/');
-            if (parts.Length != 2)
+            if (ContaCarattere(input, '/') != 1)
+                throw new ArgumentException();
+
+            string[] tokens = input.Split('/');
+            if (tokens.Length != 2)
                 throw new ArgumentException("La stringa di input non è nel formato corretto.");
 
-            if (!int.TryParse(parts[0], out int numerator) || !int.TryParse(parts[1], out int denominator))
+            if (!int.TryParse(tokens[0], out int numerator) || !int.TryParse(tokens[1], out int denominator))
                 throw new ArgumentException("La stringa di input contiene valori non validi per numeratore o denominatore.");
 
             return new Rational(numerator, denominator);
